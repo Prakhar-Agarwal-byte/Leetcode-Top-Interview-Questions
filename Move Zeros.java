@@ -3,10 +3,10 @@ class Solution {
     int i = 0;
     int j = 0;
     int n = nums.length;
-    while (j < n) {
+    while (i < n && j < n) {
       if (nums[i] != 0) {
         i++;
-      } else if (nums[j] != 0) {
+      } else if (nums[j] != 0 && i < j) {
         swap(i, j, nums);
       } else {
         j++;
